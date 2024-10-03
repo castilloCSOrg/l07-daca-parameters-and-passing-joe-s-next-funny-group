@@ -42,29 +42,29 @@ public class Main
         String uscisNum, dateOfBirth, validDate, expireDate;
 
         //INITIALIZATION SECTION
-        surname = "CHAPETON-LAMAS";
-        givenName = "NERY";
-        uscisNum1 = 12;
-        uscisNum2 = 4;
-        uscisNum3 = 789;
-        category = "C09";
-        cardNum = "SRC9876543210";
-        birthCountry = "Guatemala";
+        surname = UtilityBelt.readString("What is your first name? ",1,25);
+        givenName = UtilityBelt.readString("What is your last name? ",1,25);
+        uscisNum1 = UtilityBelt.readInt("What is the first part of your USCIS number? ",1,999);
+        uscisNum2 = UtilityBelt.readInt("What is the second part of your USCIS number? ",1,999);
+        uscisNum3 = UtilityBelt.readInt("What is the last part of your USCIS number? ",1,999);
+        category = UtilityBelt.readString("What category are you in? ",3,3);
+        cardNum = UtilityBelt.readString("What is your card number? ",13,13);
+        birthCountry = UtilityBelt.readString("What is your country of birth? ",3,25);
         termsAndConditions = "None";
 
-        birthDay = 1;
-        birthMonth = "JAN";
-        birthYear = 1970;
+        birthDay = UtilityBelt.readInt("What day were you born on? ",1,31);
+        birthMonth = UtilityBelt.readString("What are the first 3 characters of your birth month? ",3,3);
+        birthYear = UtilityBelt.readInt("What was your birth year? ",1900,3000);
 
-        sex = 'M'; //note single quotes
+        sex = UtilityBelt.readChar("What is your sex? First character only. ","FM"); //note single quotes
 
-        validMonth = 2;
-        validDay = 2;
-        validYear = 2020;
+        validMonth = UtilityBelt.readInt("What month is this card valid from? ",1,12);
+        validDay = UtilityBelt.readInt("What day is this card valid from? ",1,31);
+        validYear = UtilityBelt.readInt("What year is this card valid from? ",1900,3000);
 
-        expireMonth = 2;
-        expireDay = 2;
-        expireYear = 2022;
+        expireMonth = UtilityBelt.readInt("What month is this card valid until? ",1,12);
+        expireDay = UtilityBelt.readInt("What day is this card valid until? ",1,31);
+        expireYear = UtilityBelt.readInt("What year is this card valid until? ",1900,3000);
 
         //Strings to help clean up long printf's below
         uscisNum = String.format("%03d-%03d-%03d", uscisNum1, uscisNum2, uscisNum3);
