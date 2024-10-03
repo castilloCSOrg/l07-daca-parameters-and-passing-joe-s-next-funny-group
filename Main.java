@@ -69,8 +69,8 @@ public class Main
         //Strings to help clean up long printf's below
         uscisNum = String.format("%03d-%03d-%03d", uscisNum1, uscisNum2, uscisNum3);
         dateOfBirth = String.format("%02d %s %d", birthDay, birthMonth, birthYear);
-        validDate = String.format("%02d/%02d/%4d", validMonth, validDay, validYear);
-        expireDate = String.format("%02d/%02d/%4d", expireMonth, expireDay, expireYear);
+        validDate = Main.formatDate(validMonth,validDay,validYear);
+        expireDate = Main.formatDate(expireMonth, expireDay, expireYear);
 
 
         //INPUT + CALCULATION SECTION
@@ -106,5 +106,11 @@ public class Main
                         String.format("║%-25s%-45s║%n", ASCII_CREDIT, LABEL_REENTRY_DISCLAIMER) +
                         String.format("╚══════════════════════════════════════════════════════════════════════╝");
                 return(fullCard);
-        }        
+        }       
+        public static String formatDate(int month, int day, int year)
+        {
+                String formattedDate;
+                formattedDate = String.format("%02d/%02d/%04d",month,day,year);
+                return(formattedDate);
+        }
 }
