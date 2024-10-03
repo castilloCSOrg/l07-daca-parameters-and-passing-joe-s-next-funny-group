@@ -1,6 +1,6 @@
-// YOUR NAME: 
-// COLLABORATORS: 
-// DATE: 
+// YOUR NAME: Joe Carita
+// COLLABORATORS: Joe Carita
+// DATE: 10/3/2024
 
 public class Main
 {
